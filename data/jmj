@@ -1,0 +1,16 @@
+PRAGMA foreign_keys=OFF;
+BEGIN TRANSACTION;
+CREATE TABLE "cc" (
+	`id`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
+	`name`	CHAR,
+	`url`	CHAR
+);
+INSERT INTO "cc" VALUES(1,'163','www.163.com');
+INSERT INTO "cc" VALUES(2,'163','www.163.com');
+CREATE TABLE "ver_" (
+    "code" INTEGER NOT NULL
+);
+INSERT INTO "ver_" VALUES(1);
+DELETE FROM sqlite_sequence;
+INSERT INTO "sqlite_sequence" VALUES('cc',2);
+COMMIT;
